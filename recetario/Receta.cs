@@ -119,8 +119,9 @@ namespace recetario
                 {
                     res= true;
                 }
+                return res;
+
             }
-            return res;
 
         }
 
