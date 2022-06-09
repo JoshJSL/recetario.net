@@ -12,6 +12,7 @@ namespace recetario
     public partial class AgregarReceta : System.Web.UI.Page
     {
         protected DropDownList ingredientes;
+        static Categoria[] cats;
         protected void Page_Load(object sender, EventArgs e)
         {
             //    protected TextBox txtId;
@@ -20,10 +21,34 @@ namespace recetario
             //    protected TextBox txtMeasure;
             //    protected TextBox txtQuantity;
             //    protected TextBox txtPreparacion;
+
+            if (!IsPostBack)
+            {
+                cats = Categoria.getAllCat();
+
+                foreach(Categoria cat in cats)
+                {
+                    categoria.Items.Add(cat.Nombre);
+
+                }
+                
+            }
         }
 
 
-
+        protected void sel_cat(object sender, EventArgs e)
+        {
+            if (categoria.SelectedIndex != 0)
+            {
+                Ingrediente[] ings= Ingrediente.getIngCat(cats[categoria.SelectedIndex - 1].Id);
+                ingredientes.Items.Clear();
+                foreach(Ingrediente ing in ings)
+                {
+                    ingredientes.Items.Add(ing.Nombre);
+                }
+            }
+            
+        }
         protected void btn_guardar_receta(object sender, EventArgs e)
         {
             Receta r1 = new Receta(txtName.Text, txtIdChef.Text, txtPreparacion.Text);

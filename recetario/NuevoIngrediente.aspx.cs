@@ -60,12 +60,12 @@ namespace recetario
 
         protected void btn_guardar_ingrediente(object sender, EventArgs e)
         {
-            Ingrediente i1 = new Ingrediente(txtName.Text, txtCategory.Text);
+           /* Ingrediente i1 = new Ingrediente(txtName.Text, txtCategory.Text);
             bool resp = r1.saveRes();
             if (resp)
             {
                 Response.Write("Guardado");
-            }
+            }*/
         }
     }
 

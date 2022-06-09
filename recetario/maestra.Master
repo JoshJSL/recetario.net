@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="maestra.master.cs" Inherits="recetario.maestra" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Button runat="server" Text="Home" Onclick="btn_home" />
+            <asp:Button runat="server" Text="Recipes" Onclick="btn_recipes" />
+            <asp:Button runat="server" Text="Partners" Onclick="btn_partners" />
+            <asp:Button runat="server" Text="About" Onclick="btn_about" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="contenido" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
