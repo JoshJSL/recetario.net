@@ -22,11 +22,11 @@ namespace recetario
             Contrasenia=contrasenia;
         }
 
-        public Chef(string nombre, string apellidoMat, string apellidoPat, string contrasenia )
+        public Chef(string nombre, string apellidoPat, string apellidoMat, string contrasenia )
         {
             Nombre=nombre;
-            ApellidoMat=apellidoMat;
             ApellidoPat=apellidoPat;
+            ApellidoMat=apellidoMat;
             Contrasenia = contrasenia;
             Id = null;
         }
@@ -133,6 +133,5 @@ namespace recetario
             return res;
 
         }
-
     }
 }
