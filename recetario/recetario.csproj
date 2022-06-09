@@ -67,10 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Home.aspx" />
+    <Content Include="Imagenes\platillo.jpg" />
     <Content Include="AgregarReceta.aspx" />
     <Content Include="NuevoIngrediente.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="AgregarUsuario.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Credenciales.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgregarReceta.aspx.cs">
@@ -82,6 +87,13 @@
     </Compile>
     <Compile Include="Categoria.cs" />
     <Compile Include="Chef.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ingrediente.cs" />
     <Compile Include="NuevoIngrediente.aspx.cs">
       <DependentUpon>NuevoIngrediente.aspx</DependentUpon>
@@ -99,6 +111,27 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarUsuario.aspx.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarUsuario.aspx.designer.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Credenciales.aspx.cs">
+      <DependentUpon>Credenciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Credenciales.aspx.designer.cs">
+      <DependentUpon>Credenciales.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
