@@ -14,7 +14,7 @@ namespace recetario
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["Id"] = null;
         }
 
         protected void btn_validar_usuario(object sender, EventArgs e)
@@ -24,6 +24,7 @@ namespace recetario
             if (resp)
             {
                 //Response.Write("Guardado");
+                Session["Id"] = c1.Id;
                 Response.Redirect("Home.aspx");
             }
             else

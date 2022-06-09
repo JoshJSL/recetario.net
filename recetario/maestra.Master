@@ -15,7 +15,8 @@
             <asp:Button runat="server" Text="Home" Onclick="btn_home" />
             <asp:Button runat="server" Text="Recipes" Onclick="btn_recipes" />
             <asp:Button runat="server" Text="Partners" Onclick="btn_partners" />
-            <asp:Button runat="server" Text="About" Onclick="btn_about" />
+            <asp:Button runat="server" Text="Log out" Onclick="btn_logut" id="logout"/>
+            <asp:Button runat="server" Text="New" Onclick="btn_nueva" id="nueva"/>
         </div>
         <div>
             <asp:ContentPlaceHolder ID="contenido" runat="server">

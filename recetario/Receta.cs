@@ -152,7 +152,7 @@ namespace recetario
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
             {
-                string query = "select * from recetas " + restricicones;
+                string query = "select * from receta " + restricicones;
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet dst = new DataSet();
                 adapter.Fill(dst);
@@ -160,12 +160,16 @@ namespace recetario
                 res = new Receta[dst.Tables[0].Rows.Count];
                 for (int i = 0; i < dst.Tables[0].Rows.Count; i++)
                 {
-                    res[i] = new Receta(dst.Tables[0].Rows[i]["id_receta"] + "", dst.Tables[0].Rows[i]["id_autor"] + "", dst.Tables[0].Rows[i]["nombre"] + "", dst.Tables[0].Rows[i]["preparacion"] + "",RecetaIngredientes.getRecIng(dst.Tables[0].Rows[i]["id_receta"]+""));
+                    res[i] = new Receta(dst.Tables[0].Rows[i]["id_receta"] + "", dst.Tables[0].Rows[i]["nombre"] + "", dst.Tables[0].Rows[i]["id_autor"] + "", dst.Tables[0].Rows[i]["preparacion"] + "",RecetaIngredientes.getRecIng(dst.Tables[0].Rows[i]["id_receta"]+""));
                 }
 
 
             }
             return res;
+        }
+        public string toString()
+        {
+            return Nombre + " " + Id + " " + IdAutor;
         }
     }
 }

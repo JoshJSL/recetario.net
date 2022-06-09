@@ -32,24 +32,10 @@
      <div>
             <h1>Check the trends</h1>
             <asp:Label Text="User Name" runat="server" />
-            <div class="container">
-                <div class="caja caja1">
-                    <div class="imagen"> <asp:Image id="Image4" runat="server" Height="90px" ImageUrl="~/Imagenes/platillo.jpg" Width="200px" AlternateText="Imagen no disponible" ImageAlign="TextTop" /></div>
-                    <asp:Label ID="Label1" Text="The perfect recipe for tamales" runat="server" />
-                    <asp:Button Text="Check" runat="server" />
-                </div>
-                <div class="caja caja2">
-                    <div class="imagen"> <asp:Image id="Image5" runat="server" Height="90px" ImageUrl="~/Imagenes/platillo.jpg"  Width="200px" AlternateText="Imagen no disponible" ImageAlign="TextTop" /></div>
-                    <asp:Label ID="Label2" Text="Tostadas in 5 minutes" runat="server" />
-                    <br />
-                    <asp:Button Text="Check" runat="server" />
-                </div>
-                <div class="caja caja3">
-                    <div class="imagen"> <asp:Image id="Image6" runat="server" Height="90px" ImageUrl="~/Imagenes/platillo.jpg" Width="200px" AlternateText="Imagen no disponible" ImageAlign="TextTop" /></div>
-                    <asp:Label ID="Label3" Text="Something for breakfast?" runat="server" />
-                    <asp:Button Text="Check" runat="server" />
-                </div>
-            </div>
+            <asp:Panel runat="server" ID="panel">
+
+            </asp:Panel>
+
             <h1>Watch our video tutorial</h1>
         </div>
 </asp:Content>

@@ -21,7 +21,10 @@ namespace recetario
             //    protected TextBox txtMeasure;
             //    protected TextBox txtQuantity;
             //    protected TextBox txtPreparacion;
-
+            if (Session["Id"] == null)
+            {
+                Response.Redirect("Home.aspx")
+            }
             if (!IsPostBack)
             {
                 cats = Categoria.getAllCat();
