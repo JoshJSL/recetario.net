@@ -13,5 +13,22 @@ namespace recetario
         {
 
         }
+        protected void btn_home(object sender, EventArgs e)
+        {
+
+        }
+        protected void btn_recipes(object sender, EventArgs e)
+        {
+
+
+        }
+        protected void btn_partners(object sender, EventArgs e)
+        {
+
+        }
+        protected void btn_about(object sender, EventArgs e)
+        {
+
+        }
     }
 }

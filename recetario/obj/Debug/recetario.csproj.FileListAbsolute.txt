@@ -118,7 +118,6 @@ C:\Users\salva\Documents\workspace\asp.net\recetario.net\recetario\obj\Debug\rec
 C:\Users\salva\Documents\workspace\asp.net\recetario.net\recetario\obj\Debug\recetario.dll
 C:\Users\salva\Documents\workspace\asp.net\recetario.net\recetario\obj\Debug\recetario.pdb
 =======
-<<<<<<< HEAD
 C:\Users\bren1\Documents\JOSSO\net\recetario.net\recetario\bin\recetario.dll.config
 C:\Users\bren1\Documents\JOSSO\net\recetario.net\recetario\bin\recetario.dll
 C:\Users\bren1\Documents\JOSSO\net\recetario.net\recetario\bin\recetario.pdb
@@ -178,7 +177,6 @@ C:\Users\bren1\Documents\JOSSO\net\recetario.net\recetario\obj\Debug\recetario.c
 C:\Users\bren1\Documents\JOSSO\net\recetario.net\recetario\obj\Debug\recetario.csproj.CopyComplete
 C:\Users\bren1\Documents\JOSSO\net\recetario.net\recetario\obj\Debug\recetario.dll
 C:\Users\bren1\Documents\JOSSO\net\recetario.net\recetario\obj\Debug\recetario.pdb
-=======
 C:\Users\javie\proyecto_net\recetario.net\recetario\bin\recetario.dll.config
 C:\Users\javie\proyecto_net\recetario.net\recetario\bin\recetario.dll
 C:\Users\javie\proyecto_net\recetario.net\recetario\bin\recetario.pdb
