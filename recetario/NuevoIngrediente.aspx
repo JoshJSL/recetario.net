@@ -1,16 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NuevoIngrediente.aspx.cs" Inherits="recetario.NuevoIngrediente" %>
+﻿<%@ Page AutoEventWireup="true" CodeBehind="NuevoIngrediente.aspx.cs" Inherits="recetario.NuevoIngrediente" Language="C#" MasterPageFile="~/maestra.Master" Title="" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" OnRowDeleting="Eliminar">
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="contenido">
+<div>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDeleting="Eliminar">
                 <Columns>
                     <asp:BoundField DataField="nombre" HeaderText="Nombre" SortExpression="Nombre" />
                     <asp:BoundField DataField="categoria" HeaderText="Categoria" SortExpression="Categoria" />
@@ -20,12 +12,10 @@
 
             <h1>New Ingredient Form</h1>
             <p>Name</p>
-            <asp:TextBox runat="server" id="txtName" />
+            <asp:TextBox runat="server" id="TextBox1" />
             <p>Category</p>
-            <asp:TextBox runat="server" id="txtCategory" TextMode="Number" />
-            <asp:Button runat="server" id="btn_Guardar" Text="Guardar" OnClick="btn_guardar_ingrediente"/>
+            <asp:TextBox runat="server" id="TextBox2" TextMode="Number" />
+            <asp:Button runat="server" id="Button1" Text="Guardar" OnClick="btn_guardar_ingrediente"/>
 
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

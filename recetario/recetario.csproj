@@ -68,13 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AgregarReceta.aspx" />
+    <Content Include="AgregarUsuario.aspx" />
     <Content Include="Credenciales.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="ListaRecetas.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NuevoIngrediente.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgregarReceta.aspx.cs">
@@ -83,6 +84,13 @@
     </Compile>
     <Compile Include="AgregarReceta.aspx.designer.cs">
       <DependentUpon>AgregarReceta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarUsuario.aspx.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarUsuario.aspx.designer.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Categoria.cs" />
     <Compile Include="Chef.cs" />
@@ -101,6 +109,10 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ingrediente.cs" />
+    <Compile Include="ListaRecetas.aspx.cs">
+      <DependentUpon>ListaRecetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,13 +143,6 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,15 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AgregarReceta.aspx.cs" Inherits="recetario.AgregarReceta" %>
+﻿<%@ Page AutoEventWireup="true" CodeBehind="AgregarReceta.aspx.cs" Inherits="recetario.AgregarReceta" Language="C#" MasterPageFile="~/maestra.Master" Title="" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="contenido">
+    <div>
             <h1>New Recipe Form</h1>
             <p>Id Receta</p>
             <asp:TextBox runat="server" id="txtId" />
@@ -36,6 +28,4 @@
             <asp:Label Text="text" runat="server" id="lbl"/>
             <asp:Button runat="server" id="btn_Guardar" Text="Guardar" OnClick="btn_guardar_receta"/>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

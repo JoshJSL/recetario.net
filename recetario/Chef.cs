@@ -121,13 +121,16 @@ namespace recetario
                 adapter.Fill(dst);
                 if (dst.Tables[0].Rows.Count == 0)
                 {
-                    res= false;
+                    res = false;
                 }
-                Nombre=dst.Tables[0].Rows[0]["nombre"]+"";
-                ApellidoPat = dst.Tables[0].Rows[0]["apellido_p"] + "";
-                ApellidoMat = dst.Tables[0].Rows[0]["apellido_m"] + "";
+                else
+                {
+                    Nombre = dst.Tables[0].Rows[0]["nombre"] + "";
+                    ApellidoPat = dst.Tables[0].Rows[0]["apellido_p"] + "";
+                    ApellidoMat = dst.Tables[0].Rows[0]["apellido_m"] + "";
 
-                res= true;
+                    res = true;
+                }
 
             }
             return res;

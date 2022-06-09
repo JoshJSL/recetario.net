@@ -14,6 +14,7 @@ namespace recetario
     {
         private DataSet dst;
         public List<DataSet> lr = new List<DataSet>();
+        protected GridView GridView1;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
