@@ -12,62 +12,91 @@ namespace recetario
 {
     public partial class NuevoIngrediente : System.Web.UI.Page
     {
-
-        private DataSet dst;
-        public List<DataSet> lr = new List<DataSet>();
-        protected GridView GridView2;
+        static Categoria[] cats;
+        private static DataSet dst;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                DataSet dst = Datos();
-                GridView2.DataSource = dst;
-                GridView2.DataBind();
+                bindGrid();
+
+
+
+                    cats = Categoria.getAllCat();
+
+                    foreach (Categoria cat in cats)
+                    {
+                        ListItem li=new ListItem();
+                        li.Value = cat.Id+"";
+                        li.Text = cat.Nombre;
+                        categorias.Items.Add(li);
+
+                    }
+                
 
             }
-        }
-
-        protected void Eliminar(object sender, GridViewDeleteEventArgs e)
-        {
-            lr.Add(Datos());
-            Receta r = new Receta(e.RowIndex.ToString());
-            bool m = r.delChef();
-            //DataTable dt = new DataTable();
-            //dt.Rows.RemoveAt(Convert.ToInt32(e.RowIndex));
-            int i = Convert.ToInt32(e.RowIndex);
-            lr.RemoveAt(i);
-
-            if (m == true)
+            if (Session["fromNew"] == null)
             {
-                Response.Write("Se elimino correctamente");
+                reg.Visible = false;
             }
-            GridView2.DataSource = lr;
-            GridView2.DataBind();
         }
 
+       
 
-        public DataSet Datos()
+        protected void grid_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
-            {
-                string query = "select a.id_ingrediente, a.nombre, b.nombre as 'categoria' from ingrediente as a inner join categoria as b on a.id_categoria = b.id_categoria";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                dst = new DataSet();
-                adapter.Fill(dst);
-                return dst;
-            }
+
         }
+        protected void btn_regresar(object sender, EventArgs e)
+        {
 
-
+            Response.Redirect("AgregarReceta.aspx");
+        }
         protected void btn_guardar_ingrediente(object sender, EventArgs e)
         {
-           /* Ingrediente i1 = new Ingrediente(txtName.Text, txtCategory.Text);
-            bool resp = r1.saveRes();
-            if (resp)
+            Ingrediente ing = new Ingrediente(txtIng.Text, Convert.ToInt32(categorias.SelectedValue));
+            if (ing.saveIng())
             {
-                Response.Write("Guardado");
-            }*/
+                msg.Text = "Agregado";
+                bindGrid();
+            }
+            else
+            {
+                msg.Text = "No agregado";
+            }
+
         }
+        
+
+        
+        public void bindGrid()
+        {
+            dst = Ingrediente.getAllIngDatSetCat();
+
+            gridIng.DataSource = dst;
+            gridIng.DataBind();
+        }
+        protected void Grid_Comando(Object sender, DataGridCommandEventArgs e)
+        {
+            switch (((LinkButton)e.CommandSource).CommandName)
+            {
+                case "eliminar":
+                    {
+                        Ingrediente ing = new Ingrediente(dst.Tables[0].Rows[e.Item.ItemIndex]["id_ingrediente"] + "");
+                        
+                        if (ing.delIng())
+                            msg.Text = ("Elimiando");
+                        else
+                            msg.Text = ("No se ha eliminado");
+
+                        bindGrid();
+                        break;
+                    }
+                default:
+                    break;
+            }
+        }
+
     }
 
    

@@ -15,6 +15,7 @@ namespace recetario
         public string IdAutor { get; set; }
         public string Preparacion { get;set; }
         public RecetaIngredientes[] Ingredientes { get; set;}
+        public string NombreAutor { get; set; }
 
         public Receta (string id)
         {
@@ -40,7 +41,7 @@ namespace recetario
         }
 
 
-        public bool delChef()
+        public bool deRec()
         {
             bool res;
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
@@ -96,7 +97,7 @@ namespace recetario
                 adapter.Fill(dst);
                 if (dst.Tables[0].Rows.Count == 0)
                 {
-                    Id = "R0001";
+                    Id = "R001";
                 }
                 else
                 {
@@ -106,6 +107,7 @@ namespace recetario
                 }
 
                 query = "exec saveReceta '" + Id + "', '" + IdAutor+ "', '" + Nombre+ "', '" + Preparacion+ "'";
+                Console.WriteLine(query);
                 adapter = new SqlDataAdapter(query, conn);
                 dst = new DataSet();
                 adapter.Fill(dst);
@@ -129,7 +131,7 @@ namespace recetario
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
             {
-                string query = "select * from receta where id_receta='" + Id + "'";
+                string query = "select r.id_autor,r.id_receta,r.nombre,r.preparacion, CONCAT(c.nombre,' ',c.apellido_p,' ',c.apellido_m) as 'autor' from receta r inner join chef c on c.id_chef=r.id_autor where id_receta='" + Id + "'";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet dst = new DataSet();
                 adapter.Fill(dst);
@@ -139,6 +141,7 @@ namespace recetario
                     Nombre = dst.Tables[0].Rows[0]["nombre"] + "";
                     IdAutor= dst.Tables[0].Rows[0]["id_autor"] + "";
                     Preparacion= dst.Tables[0].Rows[0]["preparacion"] + "";
+                    NombreAutor= dst.Tables[0].Rows[0]["autor"] + "";
 
                     Ingredientes = RecetaIngredientes.getRecIng(Id);
                 }
@@ -167,9 +170,19 @@ namespace recetario
             }
             return res;
         }
-        public string toString()
+
+        public static DataSet getRecetasDataSet(string restricciones = "")
         {
-            return Nombre + " " + Id + " " + IdAutor;
+            DataSet dst;
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+            {
+                string query = "select * from receta " + restricciones;
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                dst = new DataSet();
+                adapter.Fill(dst);
+            }
+            return dst;
         }
     }
+
 }

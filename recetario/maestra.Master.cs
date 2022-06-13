@@ -15,11 +15,15 @@ namespace recetario
             {
                 logout.Text = "Log in";
                 nueva.Visible = false;
+                recetas.Visible = false;
+                ingredients.Visible = false;
 
             }
             else
             {
                 logout.Text = "Log out";
+                Chef chef = ((Chef)Session["Id"]);
+                usrInfo.Text = "Chef: " + chef.Nombre + " " + chef.ApellidoPat + " " + chef.ApellidoMat + " / Id: " + chef.Id;
             }
         }
         protected void btn_home(object sender, EventArgs e)
@@ -28,12 +32,12 @@ namespace recetario
         }
         protected void btn_recipes(object sender, EventArgs e)
         {
-
+            Response.Redirect("recipeList.aspx");
 
         }
-        protected void btn_partners(object sender, EventArgs e)
+        protected void btn_ingredients(object sender, EventArgs e)
         {
-
+            Response.Redirect("NuevoIngrediente.aspx");
         }
        
         protected void btn_logut(object sender, EventArgs e)

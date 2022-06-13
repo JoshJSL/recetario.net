@@ -12,7 +12,6 @@ namespace recetario
 {
     public partial class Home : System.Web.UI.Page
     {
-        private DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
         {
             Receta[] ress= Receta.getRecetas();
@@ -47,7 +46,10 @@ namespace recetario
         
         protected void on_check(object sender, EventArgs e)
         {
+            Button btn = (Button)(sender);
 
+            Session["IdResChe"] = Convert.ToString(btn.CommandArgument);
+            Response.Redirect("receta.aspx");
         }
     }
 }

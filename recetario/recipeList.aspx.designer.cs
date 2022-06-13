@@ -11,25 +11,25 @@ namespace recetario
 {
 
 
-    public partial class Credenciales
+    public partial class RecipeList
     {
 
         /// <summary>
-        /// Control Id.
+        /// Control msg.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Id;
+        protected global::System.Web.UI.WebControls.Label msg;
 
         /// <summary>
-        /// Control btn_Login.
+        /// Control gridRecetas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Login;
+        protected global::System.Web.UI.WebControls.DataGrid gridRecetas;
     }
 }

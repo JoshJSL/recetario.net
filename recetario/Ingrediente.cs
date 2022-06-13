@@ -151,5 +151,18 @@ namespace recetario
             }
             return ing;
         }
+        public static DataSet getAllIngDatSetCat(string restriciones="")
+        {
+            DataSet dst;
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+            {
+                string query = "select i.nombre as 'nomIng', c.nombre as 'nomCat', i.id_categoria, i.id_ingrediente from ingrediente i inner join categoria c on c.id_categoria = i.id_categoria" + restriciones + " ";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                dst = new DataSet();
+                adapter.Fill(dst);
+
+            }
+            return dst;
+        }
     }
 }

@@ -13,15 +13,17 @@
     <form id="form1" runat="server">
         <div>
             <asp:Button runat="server" Text="Home" Onclick="btn_home" />
-            <asp:Button runat="server" Text="Recipes" Onclick="btn_recipes" />
-            <asp:Button runat="server" Text="Partners" Onclick="btn_partners" />
+            <asp:Button runat="server" Text="Recipes" ID="recetas" Onclick="btn_recipes" />
+            <asp:Button runat="server" Text="Ingredients" Onclick="btn_ingredients" ID="ingredients" />
             <asp:Button runat="server" Text="Log out" Onclick="btn_logut" id="logout"/>
             <asp:Button runat="server" Text="New" Onclick="btn_nueva" id="nueva"/>
+            <asp:Label runat="server"   id="usrInfo"></asp:Label>
         </div>
         <div>
             <asp:ContentPlaceHolder ID="contenido" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+
 </body>
 </html>

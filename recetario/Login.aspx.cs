@@ -24,12 +24,12 @@ namespace recetario
             if (resp)
             {
                 //Response.Write("Guardado");
-                Session["Id"] = c1.Id;
+                Session["Id"] = c1;
                 Response.Redirect("Home.aspx");
             }
             else
             {
-                Response.Write("Credenciales inválidas, intentalo nuevamente");
+               msg.Text=("Credenciales inválidas, intentalo nuevamente");
             }
         }
         protected void btn_registrar_usuario(object sender, EventArgs e)

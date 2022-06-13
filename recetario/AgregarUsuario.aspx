@@ -1,7 +1,16 @@
 ﻿<%@ Page AutoEventWireup="true" CodeBehind="AgregarUsuario.aspx.cs" Inherits="recetario.AgregarUsuario" Language="C#" MasterPageFile="~/maestra.Master" Title="" %>
-
+<asp:Content ID="Content" runat="server" ContentPlaceHolderID="head">
+<style>
+.container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+</style>
+</asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="contenido">
-    <div>
+    <div class="container">
             <asp:Label runat="server" ID="Id"/>
             <h1>Register</h1>
             <p>Nombre</p>

@@ -11,61 +11,43 @@ namespace recetario
 {
 
 
-    public partial class WebForm1
+    public partial class receta
     {
 
         /// <summary>
-        /// Control form1.
+        /// Control titulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label titulo;
 
         /// <summary>
-        /// Control gridRes.
+        /// Control autor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridRes;
+        protected global::System.Web.UI.WebControls.Label autor;
 
         /// <summary>
-        /// Control gridChe.
+        /// Control ingredientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridChe;
+        protected global::System.Web.UI.WebControls.BulletedList ingredientes;
 
         /// <summary>
-        /// Control gridIng.
+        /// Control procedimiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridIng;
-
-        /// <summary>
-        /// Control gridTipo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridTipo;
-
-        /// <summary>
-        /// Control label.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label;
+        protected global::System.Web.UI.WebControls.Label procedimiento;
     }
 }

@@ -69,13 +69,12 @@
   <ItemGroup>
     <Content Include="AgregarReceta.aspx" />
     <Content Include="AgregarUsuario.aspx" />
-    <Content Include="Credenciales.aspx" />
     <Content Include="Home.aspx" />
-    <Content Include="ListaRecetas.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NuevoIngrediente.aspx" />
+    <Content Include="receta.aspx" />
+    <Content Include="recipeList.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgregarReceta.aspx.cs">
@@ -94,13 +93,6 @@
     </Compile>
     <Compile Include="Categoria.cs" />
     <Compile Include="Chef.cs" />
-    <Compile Include="Credenciales.aspx.cs">
-      <DependentUpon>Credenciales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Credenciales.aspx.designer.cs">
-      <DependentUpon>Credenciales.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -109,10 +101,6 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ingrediente.cs" />
-    <Compile Include="ListaRecetas.aspx.cs">
-      <DependentUpon>ListaRecetas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,14 +123,21 @@
       <DependentUpon>NuevoIngrediente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Receta.cs" />
-    <Compile Include="RecetaIngredientes.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="receta.aspx.cs">
+      <DependentUpon>receta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="receta.aspx.designer.cs">
+      <DependentUpon>receta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receta.cs" />
+    <Compile Include="RecetaIngredientes.cs" />
+    <Compile Include="recipeList.aspx.cs">
+      <DependentUpon>recipeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recipeList.aspx.designer.cs">
+      <DependentUpon>recipeList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

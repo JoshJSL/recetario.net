@@ -13,7 +13,11 @@ namespace recetario
         public string IdReceta { get; set; }
         public string IdIngrediente { get; set;}
         public string Cantidad { get; set; }
-
+        public RecetaIngredientes(string idReceta, string idIngrediente)
+        {
+            IdIngrediente = idIngrediente;
+            IdReceta = idReceta;
+        }
         public RecetaIngredientes(string idReceta, string idIngrediente, string cantidad)
         {
             IdIngrediente = idIngrediente ;

@@ -31,7 +31,6 @@
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="contenido">
      <div>
             <h1>Check the trends</h1>
-            <asp:Label Text="User Name" runat="server" />
             <asp:Panel runat="server" ID="panel">
 
             </asp:Panel>

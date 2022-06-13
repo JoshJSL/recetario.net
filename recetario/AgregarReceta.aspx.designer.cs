@@ -15,22 +15,31 @@ namespace recetario
     {
 
         /// <summary>
-        /// Control txtId.
+        /// Control titulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtId;
+        protected global::System.Web.UI.WebControls.Label titulo;
 
         /// <summary>
-        /// Control txtIdChef.
+        /// Control msg.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdChef;
+        protected global::System.Web.UI.WebControls.Label msg;
+
+        /// <summary>
+        /// Control idRec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idRec;
 
         /// <summary>
         /// Control txtName.
@@ -42,31 +51,49 @@ namespace recetario
         protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// Control categoria.
+        /// Control ingTab.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList categoria;
+        protected global::System.Web.UI.WebControls.Table ingTab;
 
         /// <summary>
-        /// Control txtMeasure.
+        /// Control categorias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMeasure;
+        protected global::System.Web.UI.WebControls.DropDownList categorias;
 
         /// <summary>
-        /// Control txtQuantity.
+        /// Control ingredientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQuantity;
+        protected global::System.Web.UI.WebControls.DropDownList ingredientes;
+
+        /// <summary>
+        /// Control txtCan.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCan;
+
+        /// <summary>
+        /// Control agrIng.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button agrIng;
 
         /// <summary>
         /// Control txtPreparacion.
@@ -76,15 +103,6 @@ namespace recetario
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPreparacion;
-
-        /// <summary>
-        /// Control lbl.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl;
 
         /// <summary>
         /// Control btn_Guardar.
