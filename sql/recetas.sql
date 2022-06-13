@@ -42,12 +42,14 @@ create table recetaIngredientes(
 
 
 
-insert into chef values('C001', 'Joshua', 'Soria', 'Láscares','1234')
-insert into chef values('C002', 'Brenda Lisbeth', 'Jiménez', 'Cortes','1709')
+insert into chef values('C001', 'Joshua', 'Soria', 'Lï¿½scares','1234')
+insert into chef values('C002', 'Brenda Lisbeth', 'Jimï¿½nez', 'Cortes','1709')
 
 insert into categoria(nombre) values( 'Fruta')
 insert into categoria (nombre) values( 'Cereal')
 insert into categoria (nombre) values( 'Leguminosa')
+insert into categoria (nombre) values('Verdura');
+insert into categoria (nombre) values('Origen animal');
 
 insert into ingrediente values('I001','Frijol',3)
 insert into ingrediente values('I002','Lenteja',3)
@@ -67,11 +69,11 @@ select * from receta r
 	inner join categoria ct on ct.id_categoria = i.id_categoria
 	inner join chef c on c.id_chef = r.id_autor
 
-	
-create procedure saveChef 
-	@nombre varchar(20), 
-	@apellido_p varchar(20), 
-	@apellido_m varchar(20), 
+
+create procedure saveChef
+	@nombre varchar(20),
+	@apellido_p varchar(20),
+	@apellido_m varchar(20),
 	@contrasenia varchar(15),
 	@id_chef char(4)
 as
@@ -85,10 +87,10 @@ begin
 	end catch
 end;
 
-create procedure modChef 
-	@nombre varchar(20), 
-	@apellido_p varchar(20), 
-	@apellido_m varchar(20), 
+create procedure modChef
+	@nombre varchar(20),
+	@apellido_p varchar(20),
+	@apellido_m varchar(20),
 	@contrasenia varchar(15),
 	@id_chef char(4)
 as
@@ -100,12 +102,12 @@ begin
 	begin catch
 		select 0 as 'result'
 	end catch
-	
+
 end;
 
 --exec modChef 'Joshua','Soria','Lascares','1234567','C001'
 
-create procedure deleteChef 
+create procedure deleteChef
 	@id_chef char(4)
 as
 begin
@@ -116,13 +118,13 @@ begin
 	begin catch
 		select 0 as 'result'
 	end catch
-	
+
 end;
 
 --exec deleteChef 'C003'
 
 ---------------------------
-create procedure saveCategoria 
+create procedure saveCategoria
 	@nombre varchar(25)
 as
 begin
@@ -144,8 +146,8 @@ end;
 
 --exec saveCategoria 'Verduradsas'
 
-create procedure modCategoria 
-	@nombre varchar(20), 
+create procedure modCategoria
+	@nombre varchar(20),
 	@id_categoria int
 as
 begin
@@ -156,12 +158,12 @@ begin
 	begin catch
 		select 0 as 'result'
 	end catch
-	
+
 end;
 
 --exec modCategoria 'Verdura',44
 
-create procedure deleteCategoria 
+create procedure deleteCategoria
 	@id_categoria int
 as
 begin
@@ -172,13 +174,13 @@ begin
 	begin catch
 		select 0 as 'result'
 	end catch
-	
+
 end;
 
 --exec deleteCategoria 55
 -----------------------------
 
-create procedure saveIngrediente 
+create procedure saveIngrediente
 	@id_ingrediente char(4),
 	@nombre varchar(20),
 	@id_categoria int
@@ -203,9 +205,9 @@ end;
 
 --exec saveIngrediente 'I009','Berenjdfena', 4
 
-create procedure modIngrediente 
+create procedure modIngrediente
 	@id_ingrediente char(4),
-	@nombre varchar(20), 
+	@nombre varchar(20),
 	@id_categoria int
 as
 begin
@@ -216,12 +218,12 @@ begin
 	begin catch
 		select 0 as 'result'
 	end catch
-	
+
 end;
 
 --exec modIngrediente 'I008','Berenjejena',44
 
-create procedure deleteIngrediente 
+create procedure deleteIngrediente
 	@id_ingrediente char(4)
 as
 begin
@@ -232,13 +234,13 @@ begin
 	begin catch
 		select 0 as 'result'
 	end catch
-	
+
 end;
 
 --exec deleteIngrediente 'I009'
 -----------------------------
 
-create procedure saveReceta 
+create procedure saveReceta
 	@id_receta char(4),
 	@id_autor char(4),
 	@nombre varchar(20),
@@ -257,7 +259,7 @@ end;
 
 --exec saveReceta 'R002','C002','Arroz con frijol','Cocine el arroz, cocine los frijoles, mezclar en el plato'
 
-create procedure modReceta 
+create procedure modReceta
 	@id_receta char(4),
 	@id_autor char(4),
 	@nombre varchar(20),
@@ -275,7 +277,7 @@ end;
 
 --exec modReceta 'R001','C002','Arroz con frijol','Cocine el arroz, cocine los frijoles, mezclar en el plato'
 
-create procedure deleteReceta 
+create procedure deleteReceta
 	@id_receta char(4)
 as
 begin
@@ -290,7 +292,7 @@ end;
 
 --exec deleteReceta 'R002'
 -------------------------
-create procedure saveRecetaIngrediente 
+create procedure saveRecetaIngrediente
 	@id_receta char(4),
 	@id_ingrediente char(4),
 	@cantidad varchar(20)
@@ -308,7 +310,7 @@ end;
 
 --exec saveRecetaIngrediente 'R001','I002','2 tazas'
 
-create procedure modRecetaIngrediente 
+create procedure modRecetaIngrediente
 	@id_receta char(4),
 	@id_ingrediente char(4),
 	@cantidad varchar(20)
@@ -325,7 +327,7 @@ end;
 
 --exec modRecetaIngrediente 'R009','I000','15 tazas'
 
-create procedure deleteRecetaIngrediente 
+create procedure deleteRecetaIngrediente
 	@id_receta char(4),
 	@id_ingrediente char(4)
 as
